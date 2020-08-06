@@ -29,7 +29,7 @@ if (process.argv[2] == '-l') {
 } */
 
 if (process.argv[2] == '-a') {
-    fs.appendFile('list-tasks.txt', process.argv[3], 'utf8', function (err) {
+    fs.appendFile('list-tasks.txt', `\n ${process.argv[3]}` , 'utf8', function (err) {
         if (err) return console.log(err);
     });
 }
